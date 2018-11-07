@@ -21,8 +21,8 @@ const App = () => {
   return (
     <div>
         <Otsikko kurssi={kurssi} />
-        <Sisalto osat={[osa1, osa2, osa3]}/>
-        <Yhteensa tehtavat={[osa1,osa2,osa3]}/>
+        <Sisalto osat={osat}/>
+        <Yhteensa osat={osat}/>
     </div>
   )
 }
@@ -56,7 +56,7 @@ const Osa = (props) => {
 const Yhteensa = (props) => {
     return (
         <div>
-            <p>yhteensä {props.tehtavat[0].tehtavia + props.tehtavat[1].tehtavia + props.tehtavat[2].tehtavia} tehtävää</p>
+            <p>yhteensä {props.osat[0].tehtavia + props.osat[1].tehtavia + props.osat[2].tehtavia} tehtävää</p>
         </div>
     )
 }
